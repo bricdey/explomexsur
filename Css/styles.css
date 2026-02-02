@@ -1,0 +1,356 @@
+/* ============================
+   ESTILOS GENERALES
+============================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background: #ffffff;
+  color: #333;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* ============================
+   HEADER
+============================ */
+.site-header {
+  background: #ffffff;
+  padding: 15px 0;
+  border-bottom: 1px solid #ddd;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #0077b6;
+}
+
+/* NAV */
+.main-nav {
+  display: flex;
+  gap: 25px;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+.main-nav a:hover {
+  color: #0077b6;
+}
+
+/* HAMBURGUESA */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+  color: #333;
+}
+
+/* ============================
+   HERO
+============================ */
+.hero {
+  height: 70vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+}
+
+.hero-inner {
+  color: #fff;
+  max-width: 600px;
+}
+
+.hero-title {
+  font-size: 48px;
+  font-weight: bold;
+}
+
+.hero-subtitle {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+/* ============================
+   INTRO
+============================ */
+.intro {
+  margin-top: 60px;
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.intro-text {
+  flex: 1;
+}
+
+.signature {
+  margin-top: 10px;
+  font-style: italic;
+  font-size: 18px;
+  color: #0077b6;
+}
+
+.image-stack {
+  flex: 1;
+}
+
+/* ============================
+   CARRUSEL
+============================ */
+.carousel {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  margin-top: 50px;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+  min-width: 100%;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Botones */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: white;
+  border: none;
+  font-size: 35px;
+  padding: 8px 14px;
+  cursor: pointer;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.prev { left: 15px; }
+.next { right: 15px; }
+
+/* ============================
+   ESTADÍSTICAS
+============================ */
+.stats-section {
+  margin-top: 70px;
+  text-align: center;
+}
+
+.stats-grid {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 25px;
+}
+
+.stat-card {
+  background: #f1f1f1;
+  padding: 20px;
+  width: 30%;
+  border-radius: 12px;
+}
+
+.stat-card h2 {
+  color: #0077b6;
+  font-size: 40px;
+}
+
+/* PROGRESOS */
+.progress-section {
+  margin-top: 40px;
+}
+
+.progress-item {
+  margin-bottom: 20px;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 12px;
+  background: #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress-bar div {
+  height: 12px;
+  background: #0077b6;
+}
+
+/* ============================
+   FOOTER
+============================ */
+.site-footer {
+  background: #003049;
+  padding: 40px 0;
+  color: #fff;
+  margin-top: 60px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-section h4 {
+  margin-bottom: 10px;
+}
+
+.footer-bottom {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 14px;
+  border-top: 1px solid #ffffff44;
+  padding-top: 10px;
+}
+
+/* ============================
+   RESPONSIVE
+============================ */
+@media (max-width: 768px) {
+
+  /* Mostrar hamburguesa */
+  .hamburger {
+    display: block;
+  }
+
+  /* Navegación oculta */
+  .main-nav {
+    position: absolute;
+    top: 65px;
+    right: 0;
+    background: white;
+    flex-direction: column;
+    width: 220px;
+    padding: 20px;
+    gap: 12px;
+    display: none;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.15);
+  }
+
+  /* Mostrar menú cuando tenga la clase */
+  .main-nav.nav-open {
+    display: flex;
+  }
+
+  .intro {
+    flex-direction: column;
+  }
+
+  .stats-grid {
+    flex-direction: column;
+  }
+
+  .stat-card {
+    width: 100%;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+/* ----- SECCIÓN DE TOURS ----- */
+
+.tours-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+/* Tarjetas estilo rectángulos de bajada */
+.tour-card {
+  width: 90%;
+  max-width: 750px;
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.15);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform .3s;
+}
+
+.tour-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Imagen cuadrada y consistente (rectángulo horizontal) */
+.tour-card img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+}
+
+/* Texto */
+.tour-info {
+  padding: 20px;
+}
+
+.tour-info h2 {
+  margin: 0 0 10px;
+  color: #01579b;
+}
+
+.tour-info p {
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+.tour-subtext {
+  color: #666;
+  font-size: 14px;
+}
+
+/* RESPONSIVE: separarlas y centrarlas */
+@media (min-width: 900px) {
+  .tours-section {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .tour-card {
+    width: 31%;
+    max-width: 350px;
+  }
+  .tour-card img {
+    height: 200px;
+  }
+}
